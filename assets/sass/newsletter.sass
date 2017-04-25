@@ -1,0 +1,68 @@
+@import 'settings'
+
+.newsletter
+    background-image: linear-gradient(to right, #004257, #004e74)
+    padding-top: 20px
+    padding-bottom: 20px
+    @media screen and (max-width: 840px)
+        flex-direction: column
+    h5
+        text-transform: uppercase
+        font-size: 20px
+        font-family: $sub-font
+        font-weight: bold
+        position: relative
+        margin-right: 17px
+        margin-bottom: 15px
+        @media screen and (min-width: 840px)
+            margin-bottom: 8px
+    input::placeholder
+        font-size: 14px
+        font-family: $roboto
+        color: $cols__letters-title
+
+.newsletter__form
+    @media screen and (max-width: 840px)
+        flex-direction: column
+        max-width: 350px
+        width: 100%
+
+.newsletter__input
+    max-width: 378px
+    width: 100%
+    border-radius: 3px
+    padding: 8px 15px
+    border: none
+    margin-right: 0
+    margin-bottom: 15px
+    @media screen and (min-width: 840px)
+        margin-bottom: 0
+        width: 378px
+        margin-right: 17px
+.newsletter__submit
+    position: relative
+    background-color: transparent
+    color: $white
+    font-size: 16px
+    font-family: $font
+    border: 1px solid $white
+    border-radius: 0
+    text-transform: uppercase
+    padding: 10px 25px
+    transition: all .3s
+    cursor: pointer
+    &:hover
+        text-decoration: none
+        border: 1px solid $green-letters
+        color: $green-letters
+        background-color: $white
+        .arrow__right--img
+            fill: $green-letters
+
+.icon-envelope
+    margin-right: 17px
+    width: 35px
+    height: 25px
+    fill: $white
+    position: relative
+    top: 5px
