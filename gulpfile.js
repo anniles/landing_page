@@ -23,7 +23,7 @@ gulp.task('sass', function() {
             cascade: false
         }))
         .pipe(cssmin())
-        .pipe(rename({suffix: '.min'}))
+        // .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./_dist/assets/css'))
         .pipe(connect.reload());

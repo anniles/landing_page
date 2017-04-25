@@ -1,17 +1,152 @@
 @import 'settings'
 
+
 header
-    height: 808px
+    min-height: 500px
     width: 100%
     background-image: url('/assets/img/sky.jpg')
     background-size: cover
     background-position: center center
     background-repeat: no-repeat
+    padding-top: 15px
+    // padding-bottom: 50px
+    @media screen and (min-width: 540px)
+        padding-bottom: 50px
+        height: 808px
 
-.main-nav
+
+.header__nav
     a
         color: $white
         text-transform: uppercase
-        font-size: 15px
+        font-size: 18px
         &:hover
             color: $white
+
+
+.header__logo
+    position: relative
+    left: 0
+    max-width: 50%
+    @media screen and (min-width: 1435px)
+        left: -63px
+
+
+.icon-search
+    width: 20px
+    height: 20px
+    fill: $white
+    position: absolute
+    top: 5px
+    right: 0
+    transition: all .3s
+
+
+.header__search
+    background: transparent
+    color: $white
+    border: none
+    font-size: 15px
+    position: relative
+    padding-right: 30px
+    &:hover
+        cursor: pointer
+        color: $light-green
+        .icon-search
+            fill: $light-green
+
+
+.header__nav-item
+    padding: 0 15px
+
+
+.header__dropdown
+    padding-right: 0
+    padding-left: 0
+    &:after
+        display: none
+    &:focus
+        box-shadow: none
+
+
+.header__dropdown--menu
+    width: 218px
+    left: -24px
+    border: none
+    border-top-left-radius: 0px
+    border-top-right-radius: 0px
+    border-bottom-right-radius: 3px
+    border-bottom-left-radius: 3px
+    border-top: 4px solid $light-green
+    box-shadow: 5px 5px 8px 1px rgba(0,0,0, 0.2)
+    &:before
+        content: ""
+        position: absolute
+        top: 43px
+        left: 40px
+        width: 7px
+        height: 7px
+        background-color: $light-green
+        transform: rotate(45deg)
+        @media screen and (min-width: 960px)
+            left: 74px
+            top: -8px
+    a
+        color: $green-letters
+        text-transform: inherit
+        font-size: 14px
+        padding-top: 7px
+        padding-bottom: 7px
+        position: relative
+        &:hover
+            background-color: $dark-green
+
+
+.icon-angle_right
+    width: 15px
+    height: 15px
+    position: absolute
+    top: 10px
+    right: 10px
+    &--green
+        fill: $green-letters
+
+
+.dropdown-item
+    &:hover
+        .icon-angle_right
+            &--green
+                fill: $white
+
+
+.header__text
+    position: relative
+    left: 0
+    max-width: 503px
+    width: 100%
+    @media screen and (min-width: 1435px)
+        left: -63px
+
+
+.header__company-moto
+    font-size: 18px
+    font-weight: bold
+    text-transform: uppercase
+    position: relative
+    &:after
+        content: ""
+        position: absolute
+        width: 73px
+        height: 5px
+        background-color: $green-line
+        left: 0
+        bottom: -10px
+
+
+.header__big-text
+    font-size: 48px
+    font-weight: bold
+    padding-top: 10px
+    line-height: 1.2
+    @media screen and (min-width: 540px)
+        font-size: 72px

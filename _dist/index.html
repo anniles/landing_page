@@ -10,40 +10,93 @@
 </head>
 <body>
 
-    <header>
-        <div class="container-fluid">
-            <nav class="navbar navbar-toggleable-md main-nav navbar-light">
+    <header class="d-flex flex-column justify-content-between">
+        <div class="container mx-0 mx-sm-auto">
+            <nav class="navbar navbar-toggleable-md navbar-light px-0 header__nav">
 
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand header__logo" href="#">
                     <img src="/assets/img/logo.png" width="110" height="27" alt="logo">
                 </a>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+                        <li class="nav-item dropdown header__nav-item">
+                            <a class="dropdown-toggle nav-link header__dropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                About
+                            </a>
+
+                            <div class="dropdown-menu header__dropdown--menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">Our team</a>
+                                <a class="dropdown-item" href="#">Our values
+                                    <span>
+                                        <svg class="icon icon-angle_right icon-angle_right--green">
+                                            <use xlink:href="./assets/svg/icons.svg#icon-angle_right"></use>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a class="dropdown-item" href="#">Join us!</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item header__nav-item">
                             <a class="nav-link" href="#">News</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item header__nav-item">
                         <a class="nav-link" href="#">Contact</a>
                         </li>
                     </ul>
+
                     <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        <button class="btn my-sm-0 header__search" type="submit">
+                            Search
+                            <svg class="icon icon-search">
+                                <use xlink:href="./assets/svg/icons.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                        <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search"> -->
                     </form>
                 </div>
             </nav>
         </div>
+
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col header__text">
+                    <h2 class="header__company-moto">company moto</h2>
+                    <p class="header__big-text">Lorem ipsum dolor sit amet molis</p>
+                </div>
+            </div>
+        </div>
     </header>
-    <!-- <svg class="icon icon-angle_right"><use xlink:href="./assets/svg/icons.svg#icon-angle_right"></use></svg>
--->
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col" class="intro">
+                    <h2>INTRO TEXT HEADING</h2>
+
+                    <p>
+                        Intro text short description. Lorem ipsum dolor sit amet, sit in mollis tincidunt, nullam fierent an duo. Eos mutat nostrud ei. Vero laudem audire mea cu, vidisse mandamus instructior ne has. Quando semper rationibus vel ea, ea pro tritani volumus. At cum erant euismod, et iriure graecis corpora vis.
+                    </p>
+
+                    <a href="">learn more
+                        <span>
+                            <svg class="icon icon-angle_right icon-angle_right--green">
+                                <use xlink:href="./assets/svg/icons.svg#icon-angle_right"></use>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 <!-- bootsrap js files -->
 <script src="/assets/js/jquery/jquery.min.js"></script>
 <script src="/assets/js/tether/tether.min.js"></script>
