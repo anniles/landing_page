@@ -1,0 +1,80 @@
+@import settings
+
+.img-block
+    background-image: url('/assets/img/bamboo.jpg')
+    background-size: cover
+    background-position: center
+    &__big
+        height: 350px
+        @media screen and (min-width: 767px)
+            height: 800px
+    &__med
+        height: 350px
+        @media screen and (min-width: 767px)
+            height: 400px
+    &__sm
+        height: 350px
+        @media screen and (min-width: 767px)
+            height: 400px
+
+.img-block__text
+    max-width: 440px
+    width: 100%
+    height: inherit
+    &--big
+        padding-bottom: 25px
+        padding-left: 0
+        @media screen and (min-width: 767px)
+            padding-bottom: 110px
+            padding-left: 100px
+    &--md, &--sm
+        padding-bottom: 25px
+        padding-left: 0
+        max-width: 385px
+        @media screen and (min-width: 767px)
+            padding-left: 42px
+            padding-bottom: 27px
+    h3
+        font-size: 18px
+        font-weight: bold
+        text-transform: uppercase
+        position: relative
+        margin-bottom: 35px
+        &:after
+            content: ""
+            position: absolute
+            width: 73px
+            height: 5px
+            background-color: $green-line
+            left: 0
+            bottom: -10px
+    p
+        font-size: 36px
+        font-weight: bold
+        line-height: 1.2
+
+.img__more-btn
+    position: relative
+    color: $white
+    font-size: 16px
+    border: 1px solid $white
+    padding: 10px 33px 10px 25px
+    transition: all .3s
+    cursor: pointer
+    &:hover
+        text-decoration: none
+        border: 1px solid $green-letters
+        color: $green-letters
+        background-color: $white
+        .arrow__right--img
+            fill: $green-letters
+
+
+.arrow__right--img
+    transition: all .3s
+    position: absolute
+    width: 20px
+    height: 25px
+    top: 9px
+    right: 6px
+    fill: $white
