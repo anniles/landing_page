@@ -1,1 +1,69 @@
 @import 'settings'
+
+footer
+    background-color: $blue
+
+.footer
+    padding-top: 50px
+    padding-bottom: 58px
+
+.footer__brand-info
+    h6
+        color: $footer__letters-dark
+        font-size: 13px
+        font-weight: bold
+        margin-bottom: 3px
+    p
+        color: $footer__letters-dark
+        font-size: 13px
+
+.footer__brand-links
+    color: $footer__letters-dark
+    border-bottom: 1px solid $footer__letters-dark
+    transition: all .3s
+    &:hover
+        text-decoration: none
+        color: $footer__letters-light
+
+.footer__list
+    padding: 0
+    li
+        list-style: none
+        a
+            color: $footer__letters-light
+            text-transform: uppercase
+            white-space: nowrap
+            font-size: 13px
+            &:hover
+                text-decoration: none
+                color: $footer__letters-dark
+
+.footer__btn
+    position: relative
+    color: $white
+    font-size: 17px
+    font-weight: bold
+    text-align: center
+    font-family: $sub-font
+    text-transform: uppercase
+    // padding: 17px 35px
+    max-width: 198px
+    width: 100%
+    height: 50px
+    transition: all .3s
+    cursor: pointer
+    background-color: $light-green
+    &:hover
+        text-decoration: none
+        color: $green-letters
+        background-color: $white
+        .arrow__right--footer
+            fill: $green-letters
+
+.arrow__right--footer
+    fill: $white
+    width: 15px
+    height: 18px
+    top: 16px
+    left: 15px
+    position: absolute
