@@ -22,8 +22,8 @@ gulp.task('sass', function() {
             browsers: ['last 5 versions'],
             cascade: false
         }))
-        .pipe(cssmin())
         // .pipe(rename({suffix: '.min'}))
+        // .pipe(cssmin())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./_dist/assets/css'))
         .pipe(connect.reload());
@@ -61,7 +61,7 @@ gulp.task('connect', function() {
 //takes .js files add modernizr and uglifies them to dist and reload
 gulp.task('js', function() {
     return gulp.src('./assets/js/**/*.js')
-        .pipe(modernizr())
+        // .pipe(modernizr())
         .pipe(uglify())
         .pipe(gulp.dest("./_dist/assets/js"))
         .pipe(connect.reload());

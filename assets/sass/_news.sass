@@ -3,13 +3,15 @@
 .news
     margin-top: 60px
     margin-bottom: 120px
+    position: relative
 
 .news-item
     position: relative
-    min-width: 200px
+    min-width: 250px
     max-width: 100%
     margin: 30px 0
     @media screen and (min-width: 540px)
+        min-width: 162px
         max-width: 200px
     &:after
         content: ""
@@ -47,3 +49,17 @@
         fill: $green-letters
         top: 2px
         right: 0
+
+
+.arrow-top
+    position: absolute
+    right: -50px
+    bottom: -39px
+    background-color: $dark-grey
+    padding: 4px 10px 9px
+    border-radius: 3px
+    cursor: pointer
+    .icon-angle_up
+        height: 20px
+        width: 20px
+        fill: $white
